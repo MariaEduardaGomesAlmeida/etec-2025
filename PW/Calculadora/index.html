@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="telaCentral">
+        <div id="conteinerPrincipal">
+            <!-- Tela de visualização -->
+            <input type="text" id="visor" disabled>
+            <!-- Tela dos botões -->
+            <div id="conteinerBotoes">
+                <div class="colunaBotoes">
+                    <div class="botao" id="botaoApagar" onclick="apagar()"><=</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">7</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">4</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">1</div>
+                    <div class="botao" id="botaoSubtracao" onclick="adicionar(this)">-</div>
+                </div>
+                <div class="colunaBotoes">
+                    <div class="botao" id="botaoParenteses" onclick="adicionar(this)">()</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">8</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">5</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">2</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">0</div>
+                </div>
+                <div class="colunaBotoes">
+                    <div class="botao" id="botaoPorcentagem" onclick="adicionar(this)">%</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">9</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">6</div>
+                    <div class="botao" id="botao" onclick="adicionar(this)">3</div>
+                    <div class="botao" id="botaoVirgula" onclick="adicionar(this)">,</div>
+                </div>
+                <div class="colunaBotoes">
+                    <div class="botao" id="botaoLimpar" onclick="limparTela()">C</div>
+                    <div class="botao" id="botaoDivisao" onclick="adicionar(this)">/</div>
+                    <div class="botao" id="botaoMultiplicacao" onclick="adicionar(this)">*</div>
+                    <div class="botao" id="botaoAdicao" onclick="adicionar(this)">+</div>
+                    <div class="botao" id="botaoIgual" onclick="calcularResultado()">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
